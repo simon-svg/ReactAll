@@ -1,0 +1,16 @@
+.header__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+.header__item{
+    margin-left: 20px;
+}
+.header__item:first-child{
+    margin-left: 0;
+}
+.header__link{
+    color: white;
+    text-transform: capitalize;
+}

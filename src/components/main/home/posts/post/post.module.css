@@ -1,0 +1,33 @@
+.post{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.img__cont{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.img{
+    width: 150%;
+    display: block;
+}
+.pors__message{
+    font-size: 18px;
+    color: black;
+    margin: 0 20px;
+}
+.pors__like{
+    font-size: 15px;
+    color: rgb(0, 162, 255);
+    cursor: pointer;
+}
