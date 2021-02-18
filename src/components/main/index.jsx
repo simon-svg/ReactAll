@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 
 // components
 import Home from './home';
-import Aboute from './aboute';
+import Messages from './messages';
 import Contact from './contact';
 
 // css
@@ -13,8 +13,8 @@ import styles from './main.module.css';
 function Main() {
     return (
         <main className={styles.main}>
-            <Route exact path="/" component={Home} />
-            <Route path="/aboute" component={Aboute} />
+            <Route path="/home" component={Home} />
+            <Route path="/messages" component={Messages} />
             <Route path="/contact" component={Contact} />
         </main>
     )

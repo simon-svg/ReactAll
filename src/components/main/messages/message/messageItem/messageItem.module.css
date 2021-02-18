@@ -1,0 +1,20 @@
+.message{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.message__item{
+    width: 100%;
+    display: flex;
+    margin-top: 35px;
+}
+.message__item_he{
+    justify-content: flex-start;
+}
+.message__item_me{
+    justify-content: flex-end;
+}
+.message__item_inner{
+    font-size: 23px;
+    color: black;
+}

@@ -14,3 +14,6 @@
     color: white;
     text-transform: capitalize;
 }
+.header__link_active{
+    color: gold;
+}

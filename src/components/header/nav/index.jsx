@@ -4,19 +4,24 @@ import { NavLink } from 'react-router-dom';
 // css
 import styles from './nav.module.css';
 
+// constants
+import navigation from '../../../constants/navigation';
+
 function Nav() {
     return (
         <nav>
             <ul className={styles.header__list}>
-                <li className={styles.header__item}>
-                    <NavLink className={styles.header__link} to="/">home</NavLink>
-                </li>
-                <li className={styles.header__item}>
-                    <NavLink className={styles.header__link} to="/aboute">about</NavLink>
-                </li>
-                <li className={styles.header__item}>
-                    <NavLink className={styles.header__link} to="/contact">contact</NavLink>
-                </li>
+                {
+                    navigation.map((item) => {
+                        return (
+                            <li className={styles.header__item} key={item.id}>
+                                <NavLink className={styles.header__link}
+                                    activeClassName={styles.header__link_active}
+                                    to={item.path}>{item.name}</NavLink>
+                            </li>
+                        )
+                    })
+                }
             </ul>
         </nav>
     )
