@@ -2,7 +2,7 @@ const navigation = [
     {
         id: 1,
         name: "home",
-        path: "/home"
+        path: "/"
     },
     {
         id: 2,

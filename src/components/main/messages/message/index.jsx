@@ -6,6 +6,7 @@ import styles from './message.module.css';
 
 // components
 import MessageItem from './messageItem';
+import MessagesForm from './messagesForm';
 
 // constants
 import messages from '../../../../constants/messageItem';
@@ -20,6 +21,7 @@ function Message() {
                     } />)
                 })
             }
+            <MessagesForm />
         </div>
     )
 }

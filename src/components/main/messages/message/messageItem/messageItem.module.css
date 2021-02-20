@@ -6,7 +6,6 @@
 .message__item{
     width: 100%;
     display: flex;
-    margin-top: 35px;
 }
 .message__item_he{
     justify-content: flex-start;
@@ -15,6 +14,14 @@
     justify-content: flex-end;
 }
 .message__item_inner{
-    font-size: 23px;
+    font-size: 17px;
     color: black;
+    margin-top: 20px;
+    padding: 7px 20px;
+    border: 2px solid rgb(0, 174, 255);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
 }

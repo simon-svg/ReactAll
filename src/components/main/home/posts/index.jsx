@@ -7,14 +7,15 @@ import styles from './posts.module.css';
 import Post from './post';
 
 // constants
-import posts from '../../../../constants/posts';
+import PostAdd from './postAdd';
 
 
-function Posts() {
+function Posts(props) {
     return (
         <div className={styles.posts}>
+            <PostAdd header={props.header} handleFormClick={props.handleFormClick} handleTextInner={props.handleTextInner} />
             {
-                posts.map((item) => {
+                props.state.map((item) => {
                     return <Post key={item.id} img={item.img} message={item.post} like={item.likeCount} />
                 })
             }

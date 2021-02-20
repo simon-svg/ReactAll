@@ -15,7 +15,7 @@ function Nav() {
                     navigation.map((item) => {
                         return (
                             <li className={styles.header__item} key={item.id}>
-                                <NavLink className={styles.header__link}
+                                <NavLink exact className={styles.header__link}
                                     activeClassName={styles.header__link_active}
                                     to={item.path}>{item.name}</NavLink>
                             </li>

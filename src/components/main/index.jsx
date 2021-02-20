@@ -10,12 +10,16 @@ import Contact from './contact';
 import styles from './main.module.css';
 
 
-function Main() {
+function Main(props) {
     return (
         <main className={styles.main}>
-            <Route path="/home" component={Home} />
-            <Route path="/messages" component={Messages} />
-            <Route path="/contact" component={Contact} />
+            <Route exact path="/" render={() => {
+                return <Home header={props.header} state={props.state}
+                    handleFormClick={props.handleFormClick} handleTextInner={props.handleTextInner} />
+            }
+            } />
+            <Route path="/messages" render={Messages} />
+            <Route path="/contact" render={Contact} />
         </main>
     )
 }

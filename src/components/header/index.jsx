@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+import headerContext from '../../context';
 
 // css
 import styles from './header.module.css';
@@ -7,15 +8,21 @@ import styles from './header.module.css';
 import Logo from "./logo";
 import Nav from "./nav";
 
-class Header extends Component {
-    render() {
-        return (
-            <header className={styles.header}>
-                <Logo />
-                <Nav />
-            </header>
-        )
-    }
+function Header() {
+    return (
+        <headerContext.Consumer>
+            {
+                (value) => {
+                    return (
+                        <header style={{ backgroundColor: value }} className={styles.header} >
+                            <Logo />
+                            <Nav />
+                        </header>
+                    )
+                }
+            }
+        </headerContext.Consumer>
+    )
 }
 
 export default Header;

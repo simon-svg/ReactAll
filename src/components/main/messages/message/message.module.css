@@ -1,6 +1,7 @@
 .message__cont{
     width: 80%;
     display: flex;
+    flex-direction: column;
     border-left: 2px solid black;
     padding-left: 10%;
 }
