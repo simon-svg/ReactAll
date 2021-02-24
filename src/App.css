@@ -4,6 +4,7 @@
     margin: 0;
 }
 .App{
+    height: 100vh;
     font-family: sans-serif;
 }
 ul{
@@ -11,6 +12,7 @@ ul{
 }
 a{
     text-decoration: none;
+    color: white;
 }
 .wrapper{
     width: 1140px;

@@ -1,15 +1,16 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 // css
 import styles from './logo.module.css';
 
-// img
-import logo from '../../../media/img/insta.webp'
 
-function Logo(){
-    return(
+function Logo() {
+    return (
         <div className={styles.logo}>
-            <img className={styles.img} src={logo} alt="insta"/>
+            <h1 className={styles.img}>
+                <NavLink to="/">S</NavLink>
+            </h1>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import headerContext from '../../context';
+import headerContext from '../../contexts/context';
 
 // css
 import styles from './header.module.css';

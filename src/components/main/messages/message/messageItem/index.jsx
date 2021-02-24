@@ -1,30 +1,24 @@
 import React from 'react';
+import MessagesForm from './messagesForm';
 
 // css
 import styles from './messageItem.module.css';
 
 
-function MessageItem(props) {
+function MessageItem({messages, newMessage, handlemessagesChange, handleBtnClick}) {
     return (
-        <div className={styles.message}>
-            <div className={`${styles.message__item} ${styles.message__item_he}`}>
-                <p className={styles.message__item_inner}>{props.he1}</p>
+        <div>
+            <div className={styles.message}>
+                {messages.message.map((item, i) => {
+                    return (
+                        <div key={i}
+                            className={`${styles.message__item} ${i % 2 === 1 ? styles.message__item_me : styles.message__item_he}`}>
+                            <p className={styles.message__item_inner}>{item}</p>
+                        </div>
+                    )
+                })}
             </div>
-            <div className={`${styles.message__item} ${styles.message__item_me}`}>
-                <p className={styles.message__item_inner}>{props.me1}</p>
-            </div>
-            <div className={`${styles.message__item} ${styles.message__item_he}`}>
-                <p className={styles.message__item_inner}>{props.he2}</p>
-            </div>
-            <div className={`${styles.message__item} ${styles.message__item_me}`}>
-                <p className={styles.message__item_inner}>{props.me2}</p>
-            </div>
-            <div className={`${styles.message__item} ${styles.message__item_he}`}>
-                <p className={styles.message__item_inner}>{props.he3}</p>
-            </div>
-            <div className={`${styles.message__item} ${styles.message__item_me}`}>
-                <p className={styles.message__item_inner}>{props.me3}</p>
-            </div>
+            <MessagesForm newMessage={newMessage} handlemessagesChange={handlemessagesChange} handleBtnClick={handleBtnClick}/>
         </div>
     )
 }

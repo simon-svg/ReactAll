@@ -7,12 +7,12 @@ const navigation = [
     {
         id: 2,
         name: "messages",
-        path: "/messages"
+        path: "/message/1"
     },
     {
         id: 3,
-        name: "contact",
-        path: "/contact"
+        name: "users",
+        path: "/users"
     },
 ]
 

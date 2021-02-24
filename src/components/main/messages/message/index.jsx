@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
 
 // css
@@ -6,22 +6,37 @@ import styles from './message.module.css';
 
 // components
 import MessageItem from './messageItem';
-import MessagesForm from './messagesForm';
 
 // constants
 import messages from '../../../../constants/messageItem';
 
+
 function Message() {
+    let [messagesState] = useState(messages);
+    let [newMessage, setNewMessage] = useState("")
+
+    const handlemessagesChange = (e) => {
+        setNewMessage(e.target.value);
+    }
+
+    const handleBtnClick = (e) => {
+        e.preventDefault();
+        setNewMessage("");
+    }
+
     return (
         <div className={styles.message__cont}>
             {
-                messages.map((item) => {
+                messagesState.map((item) => {
                     return (<Route key={item.id} path={item.path} render={
-                        () => { return <MessageItem he1={item.he1} me1={item.me1} he2={item.he2} me2={item.me2} he3={item.he3} me3={item.me3} /> }
+                        () => { return <MessageItem
+                            newMessage={newMessage}
+                            handlemessagesChange={handlemessagesChange}
+                            messages={messagesState[item.id-1]}
+                            handleBtnClick={handleBtnClick} /> }
                     } />)
                 })
             }
-            <MessagesForm />
         </div>
     )
 }

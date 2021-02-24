@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 // components
 import Home from './home';
 import Messages from './messages';
-import Contact from './contact';
+import Users from './users';
 
 // css
 import styles from './main.module.css';
@@ -18,8 +18,10 @@ function Main(props) {
                     handleFormClick={props.handleFormClick} handleTextInner={props.handleTextInner} />
             }
             } />
-            <Route path="/messages" render={Messages} />
-            <Route path="/contact" render={Contact} />
+            <Route path="/message/1" render={Messages} />
+            <Route path="/users" render={() => {
+                return <Users />
+            }} />
         </main>
     )
 }

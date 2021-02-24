@@ -1,0 +1,15 @@
+.aside__btn{
+    color: white;
+    background-color: black;
+    text-transform: capitalize;
+    font-size: 18px;
+    padding: 5px 20px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
